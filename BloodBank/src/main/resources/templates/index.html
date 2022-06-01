@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="/base" class="href" />
+</head>
+<body>
+	<section>
+		<!-- ..............................videostart................................................ -->
+		
+		<div class="embed-responsive embed-responsive-16by9 contentvideo">
+			  <video class="embed-responsive-item" th:src="@{img/abc-bg-video.webm}" autoplay loop muted allowfullscreen>
+			  </video>
+			  <div class="overlay">
+			        <p>India's Blood Centers is the national organization bringing together community-based, independent blood centers.</p>
+			        <a class="btn btn-danger videobtn" href="..." role="button">Learn More&nbsp&nbsp<i class="fa-solid fa-angle-right"></i></a>
+			    </div>
+		</div>
+		
+<div class="container pitchmain">
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="card pitchnone">
+	    	<a href="https://www.adrp.org/2021-ADRP-Annual-Conference" target="_blank"><img src="./img/contentdown.png" width="400" height="100" style="margin: 35px 0px 0px 20px;"></a>
+	      <div class="card-body">
+	        <h5 class="card-title"><strong>2021 ADRP Annual Conference</strong></h5>
+	        <p class="card-text"> <a href="https://www.adrp.org/2021-ADRP-Annual-Conference" target="_blank"><br>Early-bird discount deadline:&nbsp; June-31</a></p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-sm-6 pitch">
+	    <div class="card pitch">
+	      <div class="card-body">
+	      <!-- <img th:src="@{/img/bg-droplets-red-small.png}" alt="registerPic" /> -->
+	        <h3 class="card-title" style="font-size: 23px; color:white;"><strong>Find a Blood Center</strong></h3>
+	        <p class="card-text"><p style="size: 20px; color:white;">ABC member blood centers serve communities across the United States.</p></p>
+	        <a class="btn btn-primary pitch1" th:href="@{/bloodbank}" style="text-decoration: none; color: white;"><i class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;Find a Location Near You</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+<!-- ..............................videoEND................................................ -->
+<!-- /* ..................................................aftervideoStart................................................ */ -->
+<div class="connectlearn">
+    <p id="para"><strong> Connect. Learn. Excel.</strong></p>
+    <div class="column">
+			 <div class="card wid">
+				  <img class="card-img-top" height="270" src="./img/globals.png" alt="Card image cap">
+				  <div class="card-body">
+					    <h5 class="card-title">We Save Lives</h5>
+				   		 <p class="card-text">Since our founding as a charity in 2008, Global Blood Fund has delivered millions of dollars in grants, equipment, training and other forms of support to over 50 countries in Africa, Asia, Eastern Europe, the Middle East, Latin America and the Caribbean.</p>
+				  </div>
+			</div>
+			
+    		<div class="card wid">
+				  <img class="card-img-top" height="270" src="./img/supply.png" alt="Card image cap">
+				  <div class="card-body">
+				    	<h5 class="card-title">Demand and Supply</h5>
+				    	<p class="card-text">According to WHO, population need is the number blood units required to transfuse all who require transfusion in a defined population over a defined time period.</p>
+				 
+				  </div>
+			</div>
+		    <div class="card wid">
+				  <img class="card-img-top" height="270" src="./img/the-researchers-say-additional-research-is-necessary-to-determine-how-the-cytokines-are-contributing-to-covid-19-outcomes-.jpg" alt="Card image cap">
+				  <div class="card-body">
+				    	<h5 class="card-title">Covid-19 News</h5>
+				    	<p class="card-text">The COVID-19 pandemic compromises blood donations endangering the life-saving blood supply. These alarming results offer evidence-based grounds for practical implications for driving donations in the event of a pandemic.</p>
+				   
+				  </div>
+			</div>
+       
+      
+    </div>
+</div>
+<!-- /* ..................................................aftervideoEND................................................ */ -->
+		
+	</section>	
+</body>
+</html>

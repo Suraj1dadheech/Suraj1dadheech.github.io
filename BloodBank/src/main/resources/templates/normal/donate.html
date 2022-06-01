@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img" th:with="a=${user.imageUrl}">
+                            <img th:src="@{'/img/'+${a}}" alt=""/>
+                           <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5 th:text="${user.name}"></h5>
+                                    <h6 th:text="${user.designation}"></h6>
+                        			
+                        			<div class="proile-rating">
+                        				<h5>Status:</h5>
+                        			   		<p th:if="${age >= 18}"><span style="color:green;">Eligible to donate the blood.</span></p>
+    								   		<p th:unless="${age >= 19}"><span style="color:green;">Eligible to request the blood.</span></p>
+                                    </div>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                        
+                    
+                    <div class="col-md-2">
+                        <h5><a th:href="@{/user/edit_profile}" class="href"><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;Edit Profile</a></h5>
+                        <h5><a th:href="@{/user/index}" class="href"><i class="fa-solid fa-backward"></i>&nbsp;&nbsp;Back</a></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                       <div class="profile-work">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <label>User Role</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p th:text="${user.role}"></p>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <label>City</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p th:text="${user.city}"></p>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <label>State</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p th:text="${user.state}"></p>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <label>Enabled</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p th:text="${user.enabled}"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email-Id</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p th:text="${user.email}"></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p th:text="${user.name}"></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Contact</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p th:text="${user.contact}"></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Designation</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p th:text="${user.designation}"></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Address</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p th:text="${user.address}"></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Date of Birth</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p th:text="${user.dob}"></p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                 <div class="row">
+                                     <div class="col-md-6">
+                                         <label th:text="${user.about}"></label>
+                                     </div>
+                                 </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+        
+<!--------------------------------------Form Filling--------------------------------------------------------->
+<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2 border border-dark">
+					<div class="my-card mt-0">
+							<div th:if="${session.message}" th:classappend="${session.message.type}" class="alert alert-primary" role="alert">
+							 	 <p class="text-center" th:text="${session.message.content}"></p>
+							 	 <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+							</div>
+									<div class="container text-center"><img style="width:80px;" th:src="@{/img/register.png}" alt="registerPic" /></div>
+									<h1 class="text-center">Fill the form !!</h1>
+							<form novalidate th:action="@{/user/donating}" method="post" th:object="${user}">
+								    <input type="hidden" name="id" th:value="${user.id}">
+								    <select name="gender" class="custom-select custom-select-lg mt-5" required>
+								                    <option selected>Select Gender</option>   
+								                    <option value="Male">Male</option>    
+								                    <option value="Female">Female</option>
+								    </select>
+									
+											 <select name="bloodGroup" class="custom-select custom-select-lg mt-5" required>
+								                    <option selected>Select Blood Group</option>   
+								                    <option value="A RhD positive (A+)">A RhD positive (A+)</option>    
+								                    <option value="A RhD negative (A-)">A RhD negative (A-)</option>    
+								                    <option value="B RhD positive (B+)">B RhD positive (B+)</option>    
+								                    <option value="B RhD negative (B-)">B RhD negative (B-)</option>    
+								                    <option value="O RhD positive (O+)">O RhD positive (O+)</option>
+								                    <option value="O RhD negative (O-)">O RhD negative (O-)</option>    
+								                    <option value="AB RhD positive (AB+)">AB RhD positive (AB+)</option>    
+								                    <option value="AB RhD negative (AB-)">AB RhD negative (AB-)</option>
+								                    <option value="Not Known">Not Known</option>    
+								              </select>
+											 
+										 	<div class="form-group mt-5">
+											    <label for="password_field">Last Date of Donation</label>
+											    <input type="date" 
+											    name="lastdateofDonation"
+											    class="form-control" 
+											    id="password_field" 
+											    aria-describedby="emailHelp" 
+											    placeholder="Enter Your D.O.B."
+											    required>
+											 </div>
+											 
+											  <!-- Button field -->
+											 <div class="container text-center">
+											 	<button type="submit" class="btn bg-primary text-white">Submit</button>
+											 	<button type="reset" class="btn bg-warning">Reset</button>
+											 </div>
+								</form>			 
+						</div>
+		     	</div>
+		 </div>
+	</div>
+				
+        
+	</section>
+</body>
+</html>

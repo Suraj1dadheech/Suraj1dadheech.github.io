@@ -1,0 +1,408 @@
+body{
+	background:rgb(255, 255, 255);
+}
+/*--------------------------------------------------- Header Start----------------------------------------------------- */
+.navbar{
+	height:140px;
+
+	
+}
+.navbar-dark .navbar-brand 
+{
+    font-family: 'sans-serif';
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: red;
+     font-family: 'sans-serif';
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar .logoname{
+	margin-left:2px;
+	line-height:0.6;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+.collapse ul li a:hover{
+	background:gray;
+	border-radius:25px;
+}
+
+
+
+/* ..............................................video content start...................................... */
+.contentvideo video{
+    filter:brightness(50%);
+}
+.overlay{
+    position:absolute;
+    font-size: 40px;
+    color: white;
+    font-family: "Muli",sans-serif;
+    margin: 300px 0px 0px 100px;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    float: left;
+    height:220px;
+    /* margin-bottom: 600px; */
+}
+.videobtn{
+	margin:0px 0px 30px 0px;
+	border-radius:20px 20px 20px 20px;
+	height:17%;
+	width:12%;
+	
+}
+/* ........................................leftRIGHTsideStart................................................... */
+
+/* ...................................................leftsideSTART............................................................... */
+.pitchmain{
+	position:absolute;
+	margin-top:-60px;
+	margin-left:110px;	
+	z-index: 200;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 50%);
+    border-radius: 10px 10px 10px 10px;
+    /* border:2px solid red; */
+    background:#ffffff;
+}
+.pitchnone{
+	border:none;
+}
+.pitch{
+	background-image:url("/img/bg-droplets-red-small.png");
+	    background-color: none;
+	    border-radius: 0px 10px 10px 0px;
+}
+.pitch1{
+	margin-top:10px;
+	border-radius: 20px 20px 20px 20px;
+	height:24%;
+	width:59%;
+}
+
+/* ..................................................aftervideoStart................................................ */
+.connectlearn #para{
+    /* float: left; */
+    margin: 250px 0px 0px 120px;
+    font: 3.3em sans-serif;
+    color: #0d3c6b;
+}
+.connectlearn .column{
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.connectlearn .column > div {
+  background-color: #f1f1f1;
+  width: 250px;
+  height:600px;
+  margin: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  box-shadow: 0px 0px 10px 0.7px rgba(0, 0, 0, .5);
+  width:22rem;
+  
+} 
+
+/* .connectlearn .column > div:hover{
+transform: scale(1.1);
+    z-index: 2;
+} */
+/* ..................................................aftervideoEND................................................ */
+
+
+/*------------------------------- in the Login-signUP page Start----------------------------------*/
+.my-card{
+	padding:20px;
+	background:#FFFFFF;
+}
+
+h6.profilename{
+	float:right;
+	margin:0px 10px 80px 0px;
+}
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: gray;
+}
+
+option {
+  margin: 0.5em;
+}
+/*------------------------------- in the Login-signUP page End----------------------------------*/
+@media only screen and (max-width: 800px) {
+	  .displayNone {
+	    height:40px;
+	    width:40px;
+	  }
+	  .ml-5, .mx-5 {
+    		margin-left: 0rem!important;
+		}
+	  .extendNavBar{
+	  	height: 30%;
+	  }
+	  .connectlearn .column{
+	  display: felx;
+	  flex-direction: column;
+	  justify-content:center;
+	  box-shadow: none;
+	  transition: none;
+	  }
+	  .connectlearn #para{
+	  	font-size: 4vh;
+	  }
+	  .whybottom{
+	  	margin-top:320px;
+	  }
+	  .overlay{
+	  font-size:30px;
+	  margin:30px 0px 0px 14px;
+	  width:94%;
+	  height:60%;	
+	  }
+	  .videobtn{
+		margin:0px 0px 30px 0px;
+		border-radius:20px 20px 20px 20px;
+		height:20%;
+		width:30%;
+	  }
+	  .pitchmain{	
+	  position:relative;
+		margin:-20px 0px 0px 0px;
+	}
+	
+	.connectlearn .column > div{
+  		margin:auto;
+  		width:30rem;
+	} 
+	.navbar-brand{
+		margin-right: 18rem;
+		font-size: 0.8rem;
+	}
+}
+
+.subbtn{
+	margin-top: 32px;	
+}
+
+/* --------------------------For the journey Page Start ----------------------------------*/
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+/* --------------------------For the journey Page End ----------------------------------*/
+
+
+/* --------rgb(45, 210, 173)-----------For the FAQs Start ----------------------------------*/
+
+.why .whypage{
+    float: left;
+    margin: 20px 0px 0px 105px;
+    width: 85%;
+    height: auto;
+    /* border: 1px solid black; */
+    background-color: white;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 35%);
+}
+.accordion{
+    max-width: 1300px;
+}
+.accordion .contentBx
+{
+    position: relative;
+    margin: 10px 20px;
+}
+.accordion .contentBx .label{
+    font-family: sans-serif;
+    color: #054483;
+    position: relative;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+
+    border-style: solid;
+    border-color: #e5e5e5;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+
+}
+.accordion .contentBx .label::before{
+content: '+';
+position: absolute;
+top:50%;
+right: 20px;
+transform: translateY(-50%);
+font-size: 1.5em;
+}
+.accordion .contentBx.active .label::before{
+    content: '-';
+}
+.accordion .contentBx .content{
+    position: relative;
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    font-family: sans-serif;
+    color: black;
+    word-spacing: 1px;
+    line-height: 20px;
+
+    border-style: solid;
+    border-color: #e5e5e5;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+.accordion .contentBx.active .content{
+    height: 60px;
+    padding: 10px;
+}
+
+/* --------------------------For the FAQs End ----------------------------------*/
+
+
+
+
+
+
+
+
+
+

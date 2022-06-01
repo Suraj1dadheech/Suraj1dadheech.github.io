@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+    <head>
+        <title>Blood Donation FAQs | India's Blood Bank</title>
+        <link rel="icon" href="./imgs/625270..jpg" type="image/icon type">
+        <link rel="stylesheet" href="../fontaws/fontawesome-free-5.15.3-web/css/all.css">
+</head>
+<body>
+	<section>
+<div class="container">
+			<div class="whypage">
+		        <div class="accordion">
+		            <div class="contentBx">
+		                <div class="label">Is it safe to give Blood?</div>
+		                <div class="content">
+		                    <p>Yes. Donating blood is safe. The supplies used to collect blood are sterile and only used once.</p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="accordion">
+		            <div class="contentBx">
+		                <div class="label">Are There age limits for Blood Donors?</div>
+		                <div class="content">
+		                    <p>Each state sets the minimum blood donor age. You must be at least 16 or 17-years-old depending on your
+		                         state. Some blood centers may have an upper age limit. Please call and check with your local blood center for more information.
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="accordion">
+		            <div class="contentBx">
+		                <div class="label">I'm taking madications. Can i still donate blood?</div>
+		                <div class="content">
+		                    <p>Many medications are acceptable. Consult your physician to be sure you're healthy enough to donate and ask your community
+		                         blood center medical staff if you have questions about your eligibility. Do not assume that you are ineligible
+		                          without inquiring first.
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="accordion">
+		            <div class="contentBx">
+		                <div class="label">Will travel abroad make me ineligible to donate?</div>
+		                <div class="content">
+		                    <p>Travel to certain countries may prevent you from donating blood. Check
+		                         with your blood center if you have questions on travel-related deferrals.
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="accordion">
+		            <div class="contentBx">
+		                <div class="label">Will recent vaccinations make me ineligible to donate Blood?</div>
+		                <div class="content">
+		                    <p>Recent vaccinations may prevent you from donating blood. Flu vaccines do no make you ineligible.
+		                         Contact your blood center to request further information.
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="accordion">
+		            <div class="contentBx">
+		                <div class="label">How long does it take to give Blood?</div>
+		                <div class="content">
+		                    <p>The process for whole blood donation usually takes about one hour with the collection itself usually lasting only about 10 minutes. Expect to spend about two hours for an apheresis platelet collection. 
+		                        The donation process includes registration, a brief medical screening, blood collection, and refreshments.
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="accordion">
+		            <div class="contentBx">
+		                <div class="label">What is the universal Blood type?</div>
+		                <div class="content">
+		                    <p>Type O negative is the universal donor and can give blood to any other blood type.
+		                         Only 8% of the U.S. population has O negative blood.
+		
+		                        AB positive is the universal recipient and can receive blood from any other blood type. 
+		                        Only 2.5% of the U.S. population has AB positive blood.
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		
+		    </div>		       
+</div>
+
+<script>
+    const accordion = document.getElementsByClassName('contentBx');
+    for(i=0;i<accordion.length;i++)
+    {
+        accordion[i].addEventListener('click',function(){this.classList.toggle('active')})
+    }    
+</script>
+	</section>
+ </body>
+</html>
