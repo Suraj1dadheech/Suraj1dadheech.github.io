@@ -23,11 +23,11 @@
                                     <h5 th:text="${user.name}"></h5>
                                     <h6 th:text="${user.designation}"></h6>
                         			
-                        			<div class="proile-rating">
-                        				<h5>Status:</h5>
-                        			   		<p th:if="${age >= 18}"><span style="color:green;">Eligible to donate the blood.</span></p>
-    								   		<p th:unless="${age >= 19}"><span style="color:green;">Eligible to request the blood.</span></p>
-                                    </div>
+                        			<h5>Status:</h5>
+    								   <div th:switch="${age >= 18}">
+											  <p th:case="${true}"><span style="color:green;">Eligible to donate the blood.</span></p>
+											  <p th:case="*"><span style="color:red;">Sorry, you are not eligible to donate the blood.</span></p>
+										</div>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>

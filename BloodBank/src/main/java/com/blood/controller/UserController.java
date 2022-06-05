@@ -134,7 +134,6 @@ public class UserController {
 			model.addAttribute("age", age);
 			model.addAttribute("title", "Edit_Profile");
 			if(age<18) {
-				System.out.println("user can't Donate the blood");
 				return "normal/user_dashboard";
 			}
 				
